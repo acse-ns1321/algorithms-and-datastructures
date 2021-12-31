@@ -1,28 +1,28 @@
 // C++ program to implement recursive Binary Search
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
 // A recursive binary search function. It returns
-// location of x in given array arr[l..r] is present,
+// location of search_term in given array arr[l..r] is present,
 // otherwise -1
-int binarySearch(int arr[], int l, int r, int x)
+int binarySearch(int search_list[], int start_index, int end_index, int search_term)
 {
-	if (r >= l) {
-		int mid = l + (r - l) / 2;
+	if (end_index >= start_index) {
+		int middle_index = start_index + (end_index - start_index) / 2;
 
 		// If the element is present at the middle
 		// itself
-		if (arr[mid] == x)
-			return mid;
+		if (search_list[middle_index] == search_term)
+			return middle_index;
 
-		// If element is smaller than mid, then
+		// If element is smaller than middle_index, then
 		// it can only be present in left subarray
-		if (arr[mid] > x)
-			return binarySearch(arr, l, mid - 1, x);
+		if (search_list[middle_index] > search_term)
+			return binarySearch(search_list, start_index, middle_index - 1, search_term);
 
 		// Else the element can only be present
 		// in right subarray
-		return binarySearch(arr, mid + 1, r, x);
+		return binarySearch(search_list, middle_index + 1, end_index, search_term);
 	}
 
 	// We reach here when element is not
@@ -32,10 +32,10 @@ int binarySearch(int arr[], int l, int r, int x)
 
 int main(void)
 {
-	int arr[] = { 2, 3, 4, 10, 40 };
-	int x = 10;
-	int n = sizeof(arr) / sizeof(arr[0]);
-	int result = binarySearch(arr, 0, n - 1, x);
+	int search_list[] = { 2, 3, 4, 10, 40 };
+	int search_term = 10;
+	int list_length = sizeof(search_list) / sizeof(search_list[0]);
+	int result = binarySearch(search_list, 0, list_length - 1, search_term);
 	(result == -1)
 		? cout << "Element is not present in array"
 		: cout << "Element is present at index " << result;
