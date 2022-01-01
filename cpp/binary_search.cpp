@@ -3,15 +3,14 @@
 using namespace std;
 
 // A recursive binary search function. It returns
-// location of search_term in given array arr[l..r] is present,
+// location of search_term in given array search_list[start_index..end_index] is present,
 // otherwise -1
 int binarySearch(int search_list[], int start_index, int end_index, int search_term)
 {
 	if (end_index >= start_index) {
 		int middle_index = start_index + (end_index - start_index) / 2;
 
-		// If the element is present at the middle
-		// itself
+		// If the element is present at the middle itself
 		if (search_list[middle_index] == search_term)
 			return middle_index;
 
