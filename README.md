@@ -1,4 +1,4 @@
-# Algorithms
+# Algorithms and Data Structures
 
 <html> 
 <body>
@@ -11,5 +11,6 @@
     <li> The algorithm should complete in a finite amout of time </li>
 </ol>
 </body>
+<h2> Data Structures </h2>
 
 </html>
