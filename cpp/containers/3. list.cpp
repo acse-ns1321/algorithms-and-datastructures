@@ -1,3 +1,21 @@
+// Use for
+// Insertion into the middle/beginning of the list
+// Efficient sorting (pointer swap vs. copying)
+
+// Do not use for
+// Direct access
+
+// Time Complexity
+// Operation	Time Complexity
+// Insert Head	O(1)
+// Insert Index	O(n)
+// Insert Tail	O(1)
+// Remove Head	O(1)
+// Remove Index	O(n)
+// Remove Tail	O(1)
+// Find Index	O(n)
+// Find Object	O(n)
+
 std::list<int> l;
 
 //---------------------------------

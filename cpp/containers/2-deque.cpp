@@ -1,4 +1,15 @@
-#include <iostream>
+// Use for
+// Similar purpose of std::vector
+// Basically std::vector with efficient push_front and pop_front
+
+// Do not use for
+// C-style contiguous storage (not guaranteed)
+// Notes
+
+// Pronounced 'deck'
+// Stands for Double Ended Queue
+
+
 #include <deque>
 std::deque<int> d;
 

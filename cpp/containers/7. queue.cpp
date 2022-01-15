@@ -1,3 +1,13 @@
+// Use for
+// First-In First-Out operations
+// Ex: Simple online ordering system (first come first served)
+// Ex: Semaphore queue handling
+// Ex: CPU scheduling (FCFS)
+
+// Notes
+// Often implemented as a std::deque
+
+
 std::queue<int> q;
 
 //---------------------------------

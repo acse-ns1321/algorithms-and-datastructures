@@ -1,3 +1,20 @@
+// Use for
+// Removing duplicates
+// Ordered dynamic storage
+
+// Do not use for
+// Simple storage
+// Direct access by index
+
+// Notes
+// Sets are often implemented with binary search trees
+// Time Complexity
+
+// Operation	Time Complexity
+// Insert	O(log(n))
+// Remove	O(log(n))
+// Find	O(log(n))
+
 std::set<int> s;
 
 //---------------------------------
